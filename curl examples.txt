@@ -1,0 +1,16 @@
+/* get offers list by vendor Coloplast and url http://asdgroup.pro/tasks/xmls/1.xml */
+
+curl https://bakaexpire.000webhostapp.com/offers -X POST -d "vendor=Coloplast&url=http://asdgroup.pro/tasks/xmls/1.xml" -H "Content-Type: application/x-www-form-urlencoded"
+
+
+
+/* get min price list by vendor Coloplast 
+	and urls http://asdgroup.pro/tasks/xmls/1.xml,  http://asdgroup.pro/tasks/xmls/1.xml */
+
+curl https://bakaexpire.000webhostapp.com/min-price -X POST -d "vendor=Coloplast&urls[]=http://asdgroup.pro/tasks/xmls/1.xml&urls[]=http://asdgroup.pro/tasks/xmls/1.xml" -H "Content-Type: application/x-www-form-urlencoded"
+
+
+
+// Get median for [1,5] and [5,8]
+
+curl https://bakaexpire.000webhostapp.com/median -X POST -d "list1[]=1&list1[]=5&list2[]=5&list2[]=8" -H "Content-Type: application/x-www-form-urlencoded"
